@@ -1,0 +1,18 @@
+FOR INNER JOIN 
+
+SELECT SD.ID,SD.NAME,SD.AGE,SD.GENDER,CR.COURSE,C.CITY
+ FROM student_details SD
+INNER JOIN COURSES CR ON CR.CRID = SD.CRID 
+INNER JOIN STUDENT_CITY C ON C.CID = SD.CID ;
+
+FOR LEFT JOIN  
+
+SELECT SD.id, SD.name, CR.course
+FROM student_details SD
+LEFT JOIN courses CR ON SD.crid = CR.crid;
+
+FOR RIGHT JOIN
+
+SELECT SD.name, CR.course
+FROM student_details SD
+RIGHT JOIN courses CR ON SD.crid = CR.crid;
